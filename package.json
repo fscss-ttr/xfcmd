@@ -1,0 +1,21 @@
+{
+  "name": "xfcmd",
+  "version": "0.1.0",
+  "description": "Script runner and CLI for .xfcmd sentence scripts: scaffold FSCSS projects, check and enable component packages, automate from npm scripts, CI and editors.",
+  "type": "module",
+  "bin": { "xfcmd": "./bin/xfcmd.js" },
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./parser": "./src/parser.js",
+    "./runner": "./src/runner.js",
+    "./node-host": "./src/node-host.js",
+    "./pkg": "./src/pkg.js"
+  },
+  "files": ["bin", "src", "README.md"],
+  "scripts": { "test": "node --test" },
+  "engines": { "node": ">=18.17" },
+  "keywords": ["fscss", "xfscss", "xfcmd", "cli", "scaffold", "automation", "css"],
+  "repository": { "type": "git", "url": "git+https://github.com/fscss-ttr/xfcmd.git" },
+  "license": "MIT"
+}
