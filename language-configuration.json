@@ -1,0 +1,10 @@
+{
+  "comments": { "lineComment": "#" },
+  "brackets": [["{", "}"]],
+  "autoClosingPairs": [
+    { "open": "\"", "close": "\"", "notIn": ["string"] },
+    { "open": "{", "close": "}", "notIn": ["string"] }
+  ],
+  "surroundingPairs": [["\"", "\""], ["{", "}"]],
+  "folding": { "markers": { "start": "(?i)^\\s*create\\s+file\\s+\\S+\\s+with:?\\s*$", "end": "(?i)^\\s*end\\s*$" } }
+}

@@ -1,0 +1,123 @@
+{
+  "say": {
+    "prefix": "say",
+    "body": [
+      "say \"${1:text}\""
+    ],
+    "description": "Print a line"
+  },
+  "warn": {
+    "prefix": "warn",
+    "body": [
+      "warn \"${1:text}\""
+    ],
+    "description": "Print a warning"
+  },
+  "error": {
+    "prefix": "error",
+    "body": [
+      "error \"${1:text}\""
+    ],
+    "description": "Print an error"
+  },
+  "toast": {
+    "prefix": "toast",
+    "body": [
+      "toast \"${1:text}\" ${2|ok,warn,err|}"
+    ],
+    "description": "Show a toast"
+  },
+  "add import": {
+    "prefix": "add import",
+    "body": [
+      "add import ${1:name}"
+    ],
+    "description": "Insert an @import"
+  },
+  "create file block": {
+    "prefix": "create file block",
+    "body": [
+      "create file ${1:folder/name.fscss} with:",
+      "  ${2}",
+      "end"
+    ],
+    "description": "Create a file from lines up to end"
+  },
+  "create file inline": {
+    "prefix": "create file inline",
+    "body": [
+      "create file ${1:name.fscss} with \"${2:text}\""
+    ],
+    "description": "Create a file from one string"
+  },
+  "open file": {
+    "prefix": "open file",
+    "body": [
+      "open file ${1:{file\\}}"
+    ],
+    "description": "Open a file"
+  },
+  "set entry": {
+    "prefix": "set entry",
+    "body": [
+      "set entry ${1:{file\\}}"
+    ],
+    "description": "Set the entry file"
+  },
+  "compile": {
+    "prefix": "compile",
+    "body": [
+      "compile"
+    ],
+    "description": "Compile the active file"
+  },
+  "compile all": {
+    "prefix": "compile all",
+    "body": [
+      "compile all"
+    ],
+    "description": "Compile every root file"
+  },
+  "preview": {
+    "prefix": "preview",
+    "body": [
+      "preview"
+    ],
+    "description": "Compile and show the preview"
+  },
+  "show": {
+    "prefix": "show",
+    "body": [
+      "show ${1|files,components,snippets,tools,terminal,problems,css,preview|}"
+    ],
+    "description": "Show a panel or view"
+  },
+  "add snippet": {
+    "prefix": "add snippet",
+    "body": [
+      "add snippet ${1:key} \"${2:title}\" as \"${3:body}\""
+    ],
+    "description": "Add an editor snippet"
+  },
+  "add snippets for helpers": {
+    "prefix": "add snippets for helpers",
+    "body": [
+      "add snippets for helpers"
+    ],
+    "description": "One snippet per package helper"
+  },
+  "run command": {
+    "prefix": "run command",
+    "body": [
+      "run command \"${1|compile,run,all,preview,ls,open,new,libs,clear,theme,routes,deps,resolve|}\""
+    ],
+    "description": "Run an allowed command"
+  },
+  "wait": {
+    "prefix": "wait",
+    "body": [
+      "wait ${1:300} ms"
+    ],
+    "description": "Pause up to 3000 ms"
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "xfcmd",
+  "scopeName": "source.xfcmd",
+  "patterns": [
+    {
+      "name": "comment.line.xfcmd",
+      "match": "^\\s*(#|//).*$"
+    },
+    {
+      "begin": "(?i)^\\s*(create)\\s+(file)\\s+(\\S+\\.(?:x?fscss))\\s+(with:?)\\s*$",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.control.xfcmd"
+        },
+        "2": {
+          "name": "keyword.other.xfcmd"
+        },
+        "3": {
+          "name": "string.unquoted.path.xfcmd"
+        },
+        "4": {
+          "name": "keyword.other.xfcmd"
+        }
+      },
+      "end": "(?i)^\\s*(end)\\s*$",
+      "endCaptures": {
+        "1": {
+          "name": "keyword.control.xfcmd"
+        }
+      },
+      "contentName": "meta.embedded.block.fscss.xfcmd",
+      "patterns": [
+        {
+          "include": "#vars"
+        },
+        {
+          "include": "source.fscss"
+        },
+        {
+          "include": "source.css"
+        }
+      ]
+    },
+    {
+      "begin": "(?i)^\\s*(create)\\s+(file)\\s+(\\S+\\.(?:css))\\s+(with:?)\\s*$",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.control.xfcmd"
+        },
+        "2": {
+          "name": "keyword.other.xfcmd"
+        },
+        "3": {
+          "name": "string.unquoted.path.xfcmd"
+        },
+        "4": {
+          "name": "keyword.other.xfcmd"
+        }
+      },
+      "end": "(?i)^\\s*(end)\\s*$",
+      "endCaptures": {
+        "1": {
+          "name": "keyword.control.xfcmd"
+        }
+      },
+      "contentName": "meta.embedded.block.css.xfcmd",
+      "patterns": [
+        {
+          "include": "#vars"
+        },
+        {
+          "include": "source.css"
+        }
+      ]
+    },
+    {
+      "begin": "(?i)^\\s*(create)\\s+(file)\\s+(\\S+\\.(?:html?))\\s+(with:?)\\s*$",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.control.xfcmd"
+        },
+        "2": {
+          "name": "keyword.other.xfcmd"
+        },
+        "3": {
+          "name": "string.unquoted.path.xfcmd"
+        },
+        "4": {
+          "name": "keyword.other.xfcmd"
+        }
+      },
+      "end": "(?i)^\\s*(end)\\s*$",
+      "endCaptures": {
+        "1": {
+          "name": "keyword.control.xfcmd"
+        }
+      },
+      "contentName": "meta.embedded.block.html.xfcmd",
+      "patterns": [
+        {
+          "include": "#vars"
+        },
+        {
+          "include": "text.html.basic"
+        }
+      ]
+    },
+    {
+      "begin": "(?i)^\\s*(create)\\s+(file)\\s+(\\S+\\.(?:m?js))\\s+(with:?)\\s*$",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.control.xfcmd"
+        },
+        "2": {
+          "name": "keyword.other.xfcmd"
+        },
+        "3": {
+          "name": "string.unquoted.path.xfcmd"
+        },
+        "4": {
+          "name": "keyword.other.xfcmd"
+        }
+      },
+      "end": "(?i)^\\s*(end)\\s*$",
+      "endCaptures": {
+        "1": {
+          "name": "keyword.control.xfcmd"
+        }
+      },
+      "contentName": "meta.embedded.block.js.xfcmd",
+      "patterns": [
+        {
+          "include": "#vars"
+        },
+        {
+          "include": "source.js"
+        }
+      ]
+    },
+    {
+      "begin": "(?i)^\\s*(create)\\s+(file)\\s+(\\S+\\.(?:json))\\s+(with:?)\\s*$",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.control.xfcmd"
+        },
+        "2": {
+          "name": "keyword.other.xfcmd"
+        },
+        "3": {
+          "name": "string.unquoted.path.xfcmd"
+        },
+        "4": {
+          "name": "keyword.other.xfcmd"
+        }
+      },
+      "end": "(?i)^\\s*(end)\\s*$",
+      "endCaptures": {
+        "1": {
+          "name": "keyword.control.xfcmd"
+        }
+      },
+      "contentName": "meta.embedded.block.json.xfcmd",
+      "patterns": [
+        {
+          "include": "#vars"
+        },
+        {
+          "include": "source.json"
+        }
+      ]
+    },
+    {
+      "begin": "(?i)^\\s*(create)\\s+(file)\\s+(\\S+\\.(?:md))\\s+(with:?)\\s*$",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.control.xfcmd"
+        },
+        "2": {
+          "name": "keyword.other.xfcmd"
+        },
+        "3": {
+          "name": "string.unquoted.path.xfcmd"
+        },
+        "4": {
+          "name": "keyword.other.xfcmd"
+        }
+      },
+      "end": "(?i)^\\s*(end)\\s*$",
+      "endCaptures": {
+        "1": {
+          "name": "keyword.control.xfcmd"
+        }
+      },
+      "contentName": "meta.embedded.block.markdown.xfcmd",
+      "patterns": [
+        {
+          "include": "#vars"
+        },
+        {
+          "include": "text.html.markdown"
+        }
+      ]
+    },
+    {
+      "begin": "(?i)^\\s*(create)\\s+(file)\\s+(\\S+)\\s+(with:)\\s*$",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.control.xfcmd"
+        },
+        "2": {
+          "name": "keyword.other.xfcmd"
+        },
+        "3": {
+          "name": "string.unquoted.path.xfcmd"
+        },
+        "4": {
+          "name": "keyword.other.xfcmd"
+        }
+      },
+      "end": "(?i)^\\s*(end)\\s*$",
+      "endCaptures": {
+        "1": {
+          "name": "keyword.control.xfcmd"
+        }
+      },
+      "contentName": "meta.embedded.block.text.xfcmd",
+      "patterns": [
+        {
+          "include": "#vars"
+        }
+      ]
+    },
+    {
+      "name": "keyword.control.xfcmd",
+      "match": "(?i)^\\s*(?:say|print|info|warn|error|toast|add|import|create|open|set|compile|preview|show|run|wait)\\b"
+    },
+    {
+      "name": "invalid.illegal.unknown-sentence.xfcmd",
+      "match": "(?i)^\\s*(?!(?:say|print|info|warn|error|toast|add|import|create|open|set|compile|preview|show|run|wait)\\b)\\S+"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#vars"
+    },
+    {
+      "name": "keyword.other.xfcmd",
+      "match": "(?i)\\b(?:file|snippets?|for|helpers|with:?|as|all|entry|command)\\b"
+    },
+    {
+      "name": "constant.numeric.xfcmd",
+      "match": "\\b\\d+\\b|(?<=\\d )ms\\b"
+    },
+    {
+      "name": "entity.name.type.xfcmd",
+      "match": "\\b(?:files|components|libs|snippets|tools|terminal|problems|css|preview)\\b"
+    }
+  ],
+  "repository": {
+    "vars": {
+      "name": "variable.other.readwrite.xfcmd",
+      "match": "\\{(?:name|version|author|description|license|repo|import|helpers|fscss|file)\\}"
+    },
+    "strings": {
+      "name": "string.quoted.double.xfcmd",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.xfcmd",
+          "match": "\\\\."
+        },
+        {
+          "include": "#vars"
+        },
+        {
+          "name": "constant.numeric.placeholder.xfcmd",
+          "match": "\\$\\{\\d+(?::[^}]*|\\|[^}]*\\|)?\\}|\\$\\d"
+        }
+      ]
+    }
+  }
+}
